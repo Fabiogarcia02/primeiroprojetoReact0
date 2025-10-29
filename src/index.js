@@ -1,17 +1,29 @@
+// Importa o React, necessário para criar componentes
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
+// Importa o ReactDOM para renderizar o React na página HTML
+import ReactDOM from 'react-dom/client';
+
+// Importa o arquivo de estilos global
+import './index.css';
+
+// Importa o componente de rotas que criamos
+// Importa o componente de rotas corretamente
+import RoutesApp from './routes';
+
+
+// Cria a raiz da aplicação React, ligando ao elemento com id "root" do index.html
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Renderiza a aplicação dentro do root
 root.render(
+  // StrictMode ajuda a detectar problemas no app durante o desenvolvimento
   <React.StrictMode>
-    <App />
+    {/* Chamamos o componente RoutesApp que vai controlar todas as páginas */}
+    <RoutesApp />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Observação:
+// Se quiser medir performance, você pode usar reportWebVitals.
+// Exemplo: reportWebVitals(console.log);
